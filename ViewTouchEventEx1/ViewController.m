@@ -7,6 +7,7 @@
 //
 
 #import "ViewController.h"
+#import "CirculoViewController.h"
 
 @interface ViewController ()
 
@@ -16,12 +17,20 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view, typically from a nib.
+    
 }
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+/**
+ * Inicialização do método na view.
+ */
+-(void)loadView{
+    CirculoViewController *c = [[CirculoViewController alloc]init];
+    c.backgroundColor        = [UIColor whiteColor];
+    self.view                = c;
 }
 
 @end
